@@ -4,3 +4,4 @@ backend/out/
 .vite/
 *.class
 dist/ 
+frontend/package-lock.json
