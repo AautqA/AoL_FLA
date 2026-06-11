@@ -3,6 +3,6 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "npm run build && npx serve -s dist -l 3000"
+    "startCommand": "npm run build && npx serve -s dist -l 3000 --single"
   }
 }
