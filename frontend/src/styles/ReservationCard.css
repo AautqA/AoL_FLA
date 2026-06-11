@@ -1,0 +1,122 @@
+/* Reservation Card Styles */
+.reservation-card {
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.reservation-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.reservation-card.badge-confirmed {
+  border-left: 4px solid var(--success-color);
+}
+
+.reservation-card.badge-cancelled {
+  border-left: 4px solid var(--danger-color);
+}
+
+.reservation-card.badge-completed {
+  border-left: 4px solid var(--primary-color);
+}
+
+.reservation-card.badge-pending {
+  border-left: 4px solid var(--warning-color);
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reservation-header h3 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-confirmed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-completed {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.reservation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.detail-row .value {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.reservation-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.reservation-actions button {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .reservation-card {
+    padding: 16px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

@@ -1,0 +1,158 @@
+/* Admin Page Styles */
+.admin-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 20px;
+  background-color: var(--light-bg);
+}
+
+.admin-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.admin-header p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.admin-tabs {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.admin-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tables-management,
+.reservations-management {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.tables-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 16px;
+}
+
+.tables-header h2 {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.add-table-form {
+  background-color: var(--light-bg);
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.add-table-form .form-group {
+  margin-bottom: 0;
+}
+
+.add-table-form button {
+  height: 48px;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.reservations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.reservations-management h2 {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 20px 16px;
+  }
+
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tables-management,
+  .reservations-management {
+    padding: 16px;
+  }
+
+  .tables-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tables-header button {
+    width: 100%;
+  }
+
+  .add-table-form {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .add-table-form button {
+    height: auto;
+  }
+
+  .tables-grid,
+  .reservations-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,69 @@
+/* Dashboard Page Styles */
+.dashboard-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 20px;
+  background-color: var(--light-bg);
+}
+
+.dashboard-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.search-section {
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text-dark);
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.search-input:focus {
+  border-color: #8c5a2b;
+  box-shadow: 0 0 0 4px rgba(140, 90, 43, 0.12);
+}
+
+.tables-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 20px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .tables-grid {
+    grid-template-columns: 1fr;
+  }
+}
